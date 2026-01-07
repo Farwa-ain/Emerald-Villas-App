@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1F4B8"
+    android:padding="16dp"
+    tools:context=".SearchActivity">
+
+    <!-- Header Image/Logo Placeholder (Replace with actual image in drawable) -->
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/img"
+        android:contentDescription="@string/sunrise_hotel_hero_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hotel_hero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Find Your Perfect Stay at Sunrise Hotel"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_image" />
+
+    <!-- Check-in Date Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_check_in"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/til_check_out"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_check_in_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Check-in (DD/MM/YYYY)"
+            android:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Check-out Date Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_check_out"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/til_check_in"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_check_out_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Check-out (DD/MM/YYYY)"
+            android:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Room Type Spinner -->
+    <Spinner
+        android:id="@+id/spinner_room_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/spinner_background"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_check_in" />
+
+    <!-- Search Button -->
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onSearchRoomsClick"
+        android:padding="15dp"
+        android:text="Search Available Rooms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_room_type" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

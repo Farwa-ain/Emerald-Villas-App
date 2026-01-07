@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Color: Emerald Green (#2ecc71) -->
+    <color name="colorPrimary">#2ecc71</color>
+    <color name="colorPrimaryDark">#27ae60</color>
+    <color name="colorAccent">#F8F8FF</color> <!-- Off-White / Light Beige Accent -->
+    <color name="colorBackground">#F8F8FF</color> <!-- Light background for cards/screen -->
+    <color name="colorTextPrimary">#333333</color> <!-- Dark Gray Text -->
+    <color name="colorTextSecondary">#757575</color>
+    <color name="white">#FFFFFF</color>
+</resources>

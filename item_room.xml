@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="16dp">
+
+        <!-- Room Type (Large Text) -->
+        <TextView
+            android:id="@+id/tv_room_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Luxury Suite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_room_price"
+            app:layout_constraintHorizontal_weight="2"/>
+
+        <!-- Room Price -->
+        <TextView
+            android:id="@+id/tv_room_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PKR 25,000 / Night"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Room Number -->
+        <TextView
+            android:id="@+id/tv_room_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Room No: 305"
+            android:textColor="@color/colorTextSecondary"
+            app:layout_constraintTop_toBottomOf="@id/tv_room_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Facilities -->
+        <TextView
+            android:id="@+id/tv_room_facilities"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Facilities: WiFi, Minibar, Sea View, King Bed."
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintTop_toBottomOf="@id/tv_room_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorTextSecondary"
+            app:layout_constraintTop_toBottomOf="@id/tv_room_facilities"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Book Now Button -->
+        <Button
+            android:id="@+id/btn_book_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Book Now"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/colorPrimary"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
